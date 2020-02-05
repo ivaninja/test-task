@@ -1,0 +1,107 @@
+.bets-table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 70%;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0px;
+  background: #133252;
+  table-layout: fixed;
+}
+
+.bets-table .thead {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 40px;
+  color: #7d9cc6;
+  background: #275789;
+  font-size: 15px;
+  font-family: "Roboto";
+  position: relative;
+}
+
+.cell,
+.th {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 8px 0px;
+  text-align: left;
+}
+
+.bets-table .tbody {
+  padding-left: 40px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  color: white;
+  height: 320px;
+  font-family: "Roboto";
+}
+
+.bets-table .black {
+  font-weight: 900;
+}
+
+.bets-table .tr {
+  overflow: hidden;
+}
+
+.bets-table .icon {
+  background-color: #fec41c;
+  border-radius: 50%;
+  width: 11.51px;
+  height: 11.51px;
+  position: relative;
+  display: inline-block;
+  top: 2px;
+}
+
+.table img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.bets-table .icon img {
+  width: 11.51px;
+  height: 11.51px;
+}
+
+.bets-table .bet-value,
+.bets-table .profit {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.bets-table .green {
+  color: #73fc7f;
+}
+
+.bets-table .red {
+  color: #fd7979;
+}
+
+.loading {
+  color: white;
+}
+
+@media screen and (max-width: 425px) {
+  .bet,
+  .payout {
+    display: none;
+  }
+
+  .bets-table .tbody {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bets-table .thead{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
