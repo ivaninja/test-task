@@ -22,7 +22,7 @@ const Slider = () => {
   const _onMouseMove = (event, force) => {
     if (!dragging && !force) return;
     event.preventDefault();
-    const y = event.clientY || event.touches[0].pageY;
+    const y = event.clientY || event.touches[0].clientY;
 
     const offset = y - sliderRef.current.getBoundingClientRect().top;
     if (offset >= 0 && offset <= HEIGHT) {
